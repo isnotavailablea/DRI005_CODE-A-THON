@@ -11,6 +11,8 @@ const adddists=require('./Routes/adddists')
 const givedists=require('./Routes/getdists')
 const addfestival=require('./Routes/addfestival')
 const givefests=require('./Routes/getfestivals')
+const addblogs = require('./Routes/addblog')
+const getblogs = require('./Routes/getblogs')
 const port ='8000'
 mongo.connect(process.env.CONNECTION_URL)
 app.use(exp.json())
@@ -22,6 +24,8 @@ app.use('/adddist',adddists)
 app.use('/getdist',givedists)
 app.use('/addfest',addfestival)
 app.use('/getfests',givefests)
+app.use('/addblog',addblogs)
+app.use('/getblogs',getblogs)
 app.listen(port,()=>{
     console.log(`${port} is listening`);
 })
