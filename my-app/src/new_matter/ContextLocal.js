@@ -2,6 +2,7 @@ import React, { useState, createContext, useContext, useEffect } from "react";
 import Instates from "./Instates";
 import { AllContexts } from "../Prime";
 import Axios from "axios";
+// import { Cursor } from "mongoose";
 // import {dists} from "../functions/instategetters"
 export const Curcon = createContext();
 
@@ -17,7 +18,6 @@ function ContextLocal() {
     locals: ["Become a local ambassador"],
     map_cor: ["currently feature not available"],
   });
-  const [adders, setAdders] = useState("dis");
   const [option, setOption] = useState({
     dis: true,
     occ: false,
@@ -45,11 +45,12 @@ function ContextLocal() {
           }
         });
       }
+      
     } catch {
-      console.log("err");
+      console.log("some error occured");
     }
     return () => {
-      // console.log('clicked');
+        
     };
   }, [option]);
   useEffect(() => {
@@ -76,12 +77,8 @@ function ContextLocal() {
   }, []);
   useEffect(() => {
     try {
-      if (curState.Region == "dummy") {
-        console.log("isee");
-        return () => {};
-      }
-      if (option["occ"]) {
-        Axios.post("http://localhost:8000/getfests", {
+        if(option["occ"]){
+          Axios.post("http://localhost:8000/getfests", {
           StateName: curState.MainState.toUpperCase(),
           distName: curState.Region.toUpperCase(),
           os: false,
@@ -89,24 +86,20 @@ function ContextLocal() {
           console.log(response.data);
           setOth_obj({ ...oth_obj, festlist: response.data });
         });
-      } 
-      else if(option["blogs"]){
-        Axios.post("http://localhost:8000/getblogs",{
+        }
+        else if(option["blogs"]){
+          Axios.post("http://localhost:8000/getblogs",{
             StateName:curState.MainState.toUpperCase(),
             distName:curState.Region.toUpperCase(),
             festivalName:curState.occassion.toUpperCase()
         }).then((response)=>{
             // console.log(response.data)
             setOth_obj({...oth_obj,"blogs":response.data});
-        })
-      }
-      else {
-        console.log("its something else");
-      }
+        })}
     } catch {
       console.log("hi");
     }
-    return () => {};
+    return () => {console.log(option)};
   }, [curState]);
   const changeOption = (opt) => {
     // console.log("i was called ",opt)
@@ -195,14 +188,18 @@ function ContextLocal() {
   const changeDistrict = (id) => {
     changeOption("occ");
     setCurstate({ ...curState, Region: id });
-
-    // setRend("occ");
-    // changeRend("occ");
   };
   const changeFestive = (id) => {
     changeOption("blogs")
     setCurstate({ ...curState, occassion: id });
   };
+  const doitwithoth=(who,what)=>{
+      console.log(who," ",what);
+      if(who=="images"){
+        setOth_obj({...oth_obj,"images":what})
+      }
+      
+  }
   return (
     <Curcon.Provider
       value={{
@@ -212,6 +209,7 @@ function ContextLocal() {
         option,
         changeOption,
         oth_obj,
+        doitwithoth
       }}
     >
       <Instates />
