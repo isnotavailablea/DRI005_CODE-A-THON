@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  /* max-width: 0vw; */
+  overflow-x: hidden;
+}
+.nav-container{
+  margin: 0;
+  position:sticky;
+  top: 0;
+  border: 1px solid black;
+}
+/* .alert-msg p{
+  /* margin-left: 2vw; */
+
+.alert-msg{
+  width: 100%;
+  /* padding-left: 3vh; */
+  padding: 0.5rem 1rem;
+  background-color: #906B52;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  position: sticky;
+  top: 13.5vh;
+}
+.alert-msg p{
+   padding: 0.5vh;
+}
+.alert-msg:hover{
+  cursor: pointer;
+}
+.foot-container{
+  /* padding: 3vh; */
+  width: 100vw;
+  height: 30vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.foot-container .links{
+  display: flex;
+  justify-content: space-around;
+  width: 40vw;
+  height: 8vh;
+  margin-top: 10vh;
+  /* background-color: white; */
+} 
+.foot-container .info{
+  width: 35vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 18vh;
+  /* background-color: white; */
+}
+.foot-container .info a{
+  /* display: block; */
+  font-family: 'Courier New', Courier, monospace;
+
+  color: white;
+}
+a:hover{
+  cursor: pointer;
+}
+.foot-container .links a{
+    width: 3vw;
+    height: 5vh;
+    font-size: medium;
+    /* font-family: 'Courier New', Courier, monospace; */
+    background-size: 100% 100%;
+}
+.foot-container .links a:hover{
+    cursor: pointer;
+}
+.helpbox{
+    width: 6vh;
+    height: 6vh;
+    cursor: pointer;
+    /* background-color: ; */
+    background-color: none;
+    background-size: 100% 100%;
+    object-fit: contain;
+    position: fixed;
+    bottom: 10vh;
+    right: 2vw;
+    /* width: 300px; */
+}
+.helpbox:hover{
+    width: 7vh;
+    height: 7vh;
+    background-size: 100% 100%;
+    object-fit: contain;
+
+}

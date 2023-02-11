@@ -1,0 +1,46 @@
+.entryPic{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 3vh;
+    margin-right: 0;
+    margin-left: 0;
+    /* height: 30vh; */
+}
+.entryPic img{
+    width: 60vw;
+    object-fit: cover;
+    /* z-index: 1; */
+}
+.allstates{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
+}
+.allstates div{
+    font-size: xx-small;
+    width: 20vw;
+    height: 30vh;
+    display: flex;
+    margin: 2vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+.allstates div div{
+    width: 50%;
+    height: 40%;
+    font-size: xx-small;
+}
+.allstates div div:hover{
+    background-color: white;
+    font-size: 3rem;
+}
+.allstates div:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    width: 30vw;
+}
