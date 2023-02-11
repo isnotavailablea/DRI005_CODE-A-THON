@@ -15,7 +15,7 @@
     bottom: 9vh;
     width: 9vh;
     height: 9vh;
-    background-color: #902bf5;
+    background-color: #1a1463;
     border-radius: 50% 50%;
     display: flex;
     justify-content: center;
@@ -30,9 +30,9 @@
 .dis>div{
     width: 20vw;
     height: 20vh;
-    background-color: #902bf5;
+    background-color: #1a1463;
     margin:5vh;
-    
+    border-radius: 10px;
 }
 .dis>div>div{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -42,6 +42,7 @@
     justify-content: space-around;
     align-items: center;
     color:white;
+    /* border-radius: 20px; */
 }
 .dis>div>button{
     /* align-self: center; */

@@ -1,0 +1,134 @@
+.blogs{
+    padding: 0.5rem;
+    margin: 2vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+.title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content{
+    padding: 0.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.btns>button{
+    font-size: 1rem;
+    background-color: purple;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 4px;
+}
+.add{
+    color: white;
+    background-color: purple;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 10vh;
+    right: 5vw;
+}
+.add:hover{
+    cursor: pointer;
+}
+.addblogs{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first{
+    width: 50vw;
+    height: 79vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: yellowgreen;
+}
+.first>div{
+    font-size: 2rem;
+    color: blueviolet;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.second{
+    width: 50vw;
+    height: 79vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+}
+.first>button{
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: purple;
+    color: white;
+    margin: 5vh;
+    border-radius: 5px;
+    border: 1px solid yellow;
+}
+.second>button{
+    background-color: purple;
+    color: white;
+    border: 1px solid blue;
+    padding: 8px;
+    border-radius: 5px;
+    display: block;
+}
+.second>input{
+    width: 30vw;
+    padding: 0.3rem;
+    font-size: 1rem;
+}
+.details{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    /* position: fixed; */
+    width: 100vw;
+    color: goldenrod;
+    padding: 1vw;
+}
+span{
+    /* margin-left: 5vw; */
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.maincont{
+    /* width: 100vw; */
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* margin: 1vh; */
+    word-spacing: 1em;
+    /* max-width: 100vw; */
+    padding: 2vh;
+}
+.btnscon{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+.btnscon>button{
+    /* display: block; */
+    font-size: 1rem;
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}

@@ -2,7 +2,7 @@
     width: 100vw;
     max-width: 100vw;
     height: 10vh;
-    background-color: #902bf5;
+    background-color: #1a1463;
     padding: 2vh;
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,7 @@
     /* border: none; */
     font-size: 1.5rem;
     padding: 0.5rem;
-    color: #3a3153;
+    color: #1a1463;
     border:1px solid white;
     border-radius: 5px;
 }
@@ -39,7 +39,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #902bf5;
+    background-color: #1a1463;
 }
 .opinstate div{
     width: 16vw;

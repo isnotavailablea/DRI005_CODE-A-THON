@@ -12,7 +12,7 @@ function Dis() {
             <div>
                 {value["distName"].toUpperCase()}
             </div>
-            <button onClick={()=>{obj.changeDistrict(value["distName"]);obj.changeRend("occ");obj.changeOption("occ")}}>Select</button>
+            <button id={value["distName"]} onClick={(event)=>{obj.changeDistrict(value["distName"])}}>Select</button>
           </div>
        })
       }
