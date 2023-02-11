@@ -12,7 +12,7 @@ finduser.post("/",async (req, res) => {
            res.send("error");
         }
         else{
-          res.send(response._id);
+          res.send(response.userName);
         }
       });
     } catch (error) {

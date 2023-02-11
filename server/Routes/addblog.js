@@ -1,17 +1,22 @@
 const { response } = require("express");
 const exp = require("express");
 const app = exp();
-const adddists = exp.Router();
-const distmodel = require("../Model/dist");
-adddists
+const addblogs = exp.Router();
+const blogmodel = require("../Model/blog");
+addblogs
 .post("/",async (req,res)=>{
     try{
         try {
-            const newdist = new distmodel({
+            const newblog = new blogmodel({
               distName: req.body.distName,
               StateName: req.body.StateName,
+              userName: req.body.userName,
+              rating: req.body.rating,
+              festivalName:req.body.festivalName,
+              content:req.body.content,
+              Title:req.body.Title
             });
-            newdist.save().then((response) => {
+            newblog.save().then((response) => {
                     res.send("ok")
             });
           } catch (err) {
@@ -24,4 +29,4 @@ adddists
         return;
     }
 })
-module.exports=adddists;
+module.exports=addblogs;

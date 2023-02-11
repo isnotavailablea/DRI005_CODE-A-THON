@@ -6,22 +6,12 @@ const festivalmodel = require("../Model/festival");
 givefests
 .post("/",async (req,res)=>{
     try{
-        if(req.body.os){
-            await festivalmodel.find({StateName:req.body.StateName}).then((response)=>{
-                if(response.length===0){
-                    res.send(["error"]);
-                }
-                else{
-                    res.send(response)
-                }
-           })
-        }
-        else{
+            console.log(req.body)
             await festivalmodel.find({StateName:req.body.StateName,distName:req.body.distName}).then((response)=>{
                 if(response.length===0){
                     festivalmodel.find({StateName:req.body.StateName}).then((response)=>{
                         if(response.length===0){
-                            res.send(["error"]);
+                            res.send([{"festivalName":"error"}]);
                         }
                         else{
                             res.send(response)
@@ -32,7 +22,6 @@ givefests
                     res.send(response)
                 }
            })
-        }
     }
     catch{
         res.send([{"festlist":"error act"}]);
