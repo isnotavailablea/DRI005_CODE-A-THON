@@ -17,6 +17,8 @@ const addblogs = require('./Routes/addblog')
 const getblogs = require('./Routes/getblogs')
 const addimgfests = require('./Routes/addimgforfests')
 const givefestimgs = require('./Routes/getfestimgs')
+const addlocalstay = require('./Routes/addlocalStay')
+const givelocalstays = require('./Routes/getlocalstay')
 const port ='8000'
 mongo.connect(process.env.CONNECTION_URL)
 app.use(bodyParser.json({limit: '50mb'}));
@@ -33,7 +35,9 @@ app.use('/getfests',givefests)
 app.use('/addblog',addblogs)
 app.use('/getblogs',getblogs)
 app.use('/addfestimg',addimgfests)
-app.use('/getfestimgs',givefestimgs)
+app.use('/getfestimgs',givefestimgs)  
+app.use('/addlocalstay',addlocalstay)
+app.use('/getlocalstays',givelocalstays)
 app.listen(port,()=>{
     console.log(`${port} is listening`);
 })
